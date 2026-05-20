@@ -1,0 +1,3 @@
+"use client";
+import { useTradingStore } from "@/store/use-trading-store";
+export default function AccountsPage(){const accounts=useTradingStore(s=>s.accounts);return <div><h2 className="text-xl font-semibold mb-4">Accounts</h2><div className="grid md:grid-cols-2 gap-3">{accounts.map(a=><div key={a.id} className="glass rounded-2xl p-4"><p className="font-medium">{a.name}</p><p className="text-sm text-slate-400">{a.broker} • {a.type}</p><p className="mt-2 text-2xl">${a.balance.toLocaleString()}</p><div className="text-xs mt-2">Target {(a.balance/a.profitTarget*100).toFixed(1)}%</div></div>)}</div></div>}
