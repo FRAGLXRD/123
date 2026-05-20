@@ -1,0 +1,1 @@
+export default function Page(){return <div className="glass rounded-2xl p-6"><h2 className="text-xl font-semibold mb-2">Analytics</h2><p className="text-slate-400">MVP module with mock data and premium dark UI placeholder.</p></div>}
